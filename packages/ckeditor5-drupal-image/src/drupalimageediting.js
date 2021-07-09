@@ -47,6 +47,9 @@ export default class DrupalImageEditing extends Plugin {
 		conversion.for( 'upcast' )
 			.add( viewImageToModelImage( editor ) );
 		conversion.for( 'downcast' )
+			// TODO: Alignment downcast to data-align
+			// TODO: Missing space before the inline image (check upcast first)
+			// TODO: setData/getData automated integration tests
 			.add( modelEntityUuidToDataAttribute() )
 			.add( modelEntityFileToDataAttribute() );
 
